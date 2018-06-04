@@ -82,7 +82,7 @@ func Handler(request http.Request) (Response, error) {
 			return Response{}, err
 		}
 
-		ts := t.Format("Monday, 02, January, 2006, 3 4 PM")
+		ts := t.Format("Monday 2 January 2006, 3 4 PM")
 
 		return NewResponse(fmt.Sprintf("The latest earthquake was a magnitude %0.1f earthquake near %s at %s", p.Magnitude, p.Locality, ts)), nil
 	}
